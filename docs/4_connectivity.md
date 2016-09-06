@@ -121,7 +121,10 @@ InterruptIn pir(PIN_PIR);
 // We need a way to signal from an interrupt context -> main thread, use a Semaphore for it...
 Semaphore updates(0);
 
-// YOUR CODE HERE
+// YOUR CODE HERE  vvvvvvvvvvvvvv
+// Temporary variable to enable compiling. Remove when adding resource definitions.
+int pirCount;  
+// YOUR CODE HERE  ^^^^^^^^^^^^^
 
 // Registered callback for mbed Client
 DigitalOut statusLed(LED1, 1);
@@ -179,7 +182,7 @@ We can implement these actions by defining resources. Resources are actions that
 
 We can use SimpleClient to define these resources and attach actions to each resource.
 
-Replace `YOUR CODE HERE` in ``main.cpp`` with (comments inline):
+Replace `YOUR CODE HERE  vvvvvvvvvvvvvv` in ``main.cpp`` with (comments inline):
 
 ```cpp
 // Fwd declaration
